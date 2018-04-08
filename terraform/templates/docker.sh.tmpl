@@ -1,0 +1,7 @@
+#!/bin/bash
+
+yum -y install epel-release
+yum -y install docker-io
+service docker restart
+docker pull agnieszkatatara/adele
+docker run -d -p 80:8080 agnieszkatatara/adele
